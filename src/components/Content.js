@@ -1,6 +1,7 @@
-import React from 'react';
-
-export default function Content({ isOpen }) {
+import React, { useContext } from 'react';
+import { AppContext } from '../Context/AppContext';
+export default function Content() {
+  const {isOpen} = useContext(AppContext);
   return (
     <div
       className='content'

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import UserInformation from './UserInformation';
-
+import { AppContext } from '../Context/AppContext';
+import App from '../App';
 export default function Sidebar() {
+  const {isOpen} = useContext(AppContext);
+
+  if (!isOpen) return null;
   return (
     <div
       className='sidebar'
